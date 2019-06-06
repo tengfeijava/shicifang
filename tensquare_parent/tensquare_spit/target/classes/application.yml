@@ -1,0 +1,13 @@
+server: 
+  port: 9006
+spring: 
+  application:  
+    name: tensquare-spit #指定服务名
+  data:
+    mongodb:
+      host: 192.168.200.129
+      database: tensquare
+  # 需要把密钥配置在此不然会解析不对
+jwt:
+  config:
+    key: miyue  # 相同的密钥才可以得到相同的结果

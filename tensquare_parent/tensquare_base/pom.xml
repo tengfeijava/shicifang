@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tensquare_parent</artifactId>
+        <groupId>com.tensquare</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>tensquare_base</artifactId>
+
+      <dependencies>
+          <!--依赖 tensquare_common-->
+          <dependency>
+              <groupId>com.tensquare</groupId>
+              <artifactId>tensquare_common</artifactId>
+              <version>0.0.1-SNAPSHOT</version>
+          </dependency>
+          <!-- springBoot JPA的起步依赖 -->
+          <dependency>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-starter-data-jpa</artifactId>
+          </dependency>
+          <!-- MySQL连接驱动 -->
+          <dependency>
+              <groupId>mysql</groupId>
+              <artifactId>mysql-connector-java</artifactId>
+          </dependency>
+
+          <!--注册微服务 Spring Cloud 客户端到 Eereka 依赖-->
+          <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+          </dependency>
+
+          <!--用微服务Spring Cloud Config 统一管理工具-->
+          <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-starter-config</artifactId>
+          </dependency>
+          <!--Spring Cloud BUS 消息总件 此文件配置信息需要到Git托管平台上去配置-->
+          <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-bus</artifactId>
+          </dependency>
+          <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+          </dependency>
+           <!--监控接口  添加此包 但是不添加此包也可以使用-->
+          <!--<dependency>-->
+              <!--<groupId>org.springframework.boot</groupId>-->
+              <!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+          <!--</dependency>-->
+      </dependencies>
+
+</project>

@@ -1,0 +1,23 @@
+#服务端口
+server:
+  port: 12000
+
+spring:
+  application:
+    name: tensquare-config    #服务名称
+
+       #指定配置文件所在的 Git 仓库地址
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/ctengfei/config.git
+     #此RabbitMQ 引用的是SpringCloud BUS 里的集成RabbitMQ 但是集成的跟SpringBoot的集成MQ用法一样
+  rabbitmq:
+    host: 192.168.200.129
+    #暴露触发消息总栈地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
